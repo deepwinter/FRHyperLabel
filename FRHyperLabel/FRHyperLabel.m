@@ -227,7 +227,7 @@ static UIColor *FRHyperLabelLinkColorHighlight;
 	textContainer.lineFragmentPadding = 0.0;
 	textContainer.lineBreakMode = self.lineBreakMode;
 	textContainer.maximumNumberOfLines = self.numberOfLines;
-	textContainer.size = self.bounds.size;
+	textContainer.size = CGSizeMake(self.bounds.size.width, CGFLOAT_MAX);
 	[layoutManager addTextContainer:textContainer];
 	
 	NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:self.attributedText];
